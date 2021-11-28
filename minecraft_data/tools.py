@@ -35,9 +35,9 @@ def convert(_dir, version, edition ='pc'):
 
     def find_item_or_block(find):
         if isinstance(find, int):  # by id
-            return find_by(find, ret['items'], ret['blocks'])
+            return find_by(find, ret['blocks'], ret['items'])
         else:  # by name
-            return find_by(find, ret['items_name'], ret['blocks_name'])
+            return find_by(find, ret['blocks_name'], ret['items_name'])
 
     ret['find_item_or_block'] = find_item_or_block
 
